@@ -19,9 +19,10 @@ public class ActionsOnNumbers {
     }
 
     public static int subtractionNumbers(int... number) {
+        int subtractionMax = max(number);
         int subtraction = max(number);
         for (int j : number) {
-            if (max(number) != j) {
+            if (subtractionMax != j) {
                 subtraction -= j;
             }
         }
@@ -36,21 +37,23 @@ public class ActionsOnNumbers {
         return multiplication;
     }
 
-    public static double divisionNumbers(int... number) {
-        double division = number[0];
+    public static double dividendNumbers(int... number) {
+        double dividend = number[0];
         for (int i = 1; i < number.length; i++) {
-            if (division > 0 && division > number[i]) {
-                division = division / number[i];
-            } else return division;
+            if (dividend > 0 && dividend > number[i]) {
+                dividend = dividend / number[i];
+            } else {
+                return dividend;
+            }
         }
-        return division;
+        return dividend;
     }
 
     public static long factorialNumbers(int n) {
         long factorial = 1;
         if (n > 0) {
             for (int i = 2; i <= n; i++) {
-                factorial = factorial * i;
+                factorial *= i;
             }
         }
         return factorial;
