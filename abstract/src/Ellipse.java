@@ -12,23 +12,14 @@ public class Ellipse extends Figure {
         return semiAxisA;
     }
 
-    public int getSemiAxisB() {
-        return semiAxisB;
+    @Override
+    public double getPerimeter() {
+        return (4 * (Math.PI * semiAxisA * semiAxisB + (semiAxisA - semiAxisB) * (semiAxisA - semiAxisB)) / (semiAxisA + semiAxisB));
     }
 
     @Override
-    public void getPerimeter() {
-        int a = getSemiAxisA();
-        int b = getSemiAxisB();
-        int p = (int) (4*(((Math.PI*a*b) + ((2*a) - (2*a*b) + (2*b))) / (a+b)));
-        // формула взята из википедии в проект добавила фотографию формулы
-        System.out.println("Периметр Ellipse равен " + p);
-    }
-
-    @Override
-    public void getArea() {
-        int s = (int) (Math.PI*getSemiAxisA()*getSemiAxisB());
-        System.out.println("Площадь Ellipse равен " + s);
+    public double getArea() {
+        return (Math.PI * semiAxisA * semiAxisB);
     }
 }
 

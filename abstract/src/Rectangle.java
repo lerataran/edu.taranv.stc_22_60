@@ -12,21 +12,13 @@ public class Rectangle extends Figure {
         return width;
     }
 
-    public int getHeight() {
-        return height;
+    @Override
+    public double getPerimeter() {
+        return 2 * (width + height);
     }
 
     @Override
-    public void getPerimeter() {
-        int a = getWidth();
-        int b = getHeight();
-        int p = 2*(a+b);
-        System.out.println("Периметр Rectangle равен " + p);
-    }
-
-    @Override
-    public void getArea() {
-        int s = getWidth()*getHeight();
-        System.out.println("Площадь Rectangle равен " + s);
+    public double getArea() {
+        return width * height;
     }
 }

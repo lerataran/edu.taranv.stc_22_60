@@ -6,20 +6,17 @@ public class Circle extends Ellipse implements Moveable {
 
     @Override
     public void move(int x, int y) {
-        int x1=setX(x);
-        int y1=setY(y);
-        System.out.println("Circle переместился на "+ x1 + ","+y1);
+        setX(x + getX());
+        setY(y + getY());
     }
 
     @Override
-    public void getPerimeter() {
-        int p = (int) (2*Math.PI*getSemiAxisA());
-        System.out.println("Периметр Circle равен " + p);
+    public double getPerimeter() {
+        return (2 * Math.PI * getSemiAxisA());
     }
 
     @Override
-    public void getArea() {
-        int s = (int) (Math.PI*getSemiAxisA()*getSemiAxisA());
-        System.out.println("Площадь Square равен " + s);
+    public double getArea() {
+        return (Math.PI * getSemiAxisA() * getSemiAxisA());
     }
 }

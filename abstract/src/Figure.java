@@ -1,10 +1,18 @@
 public abstract class Figure {
-    protected  int x;
-    protected  int y;
+    protected int x;
+    protected int y;
 
     public Figure(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     public int setX(int x) {
@@ -17,9 +25,9 @@ public abstract class Figure {
         return y;
     }
 
-    public abstract void getPerimeter();
+    public abstract double getPerimeter();
 
-    public abstract void getArea();
+    public abstract double getArea();
 
 
 }

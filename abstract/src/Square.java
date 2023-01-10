@@ -5,20 +5,17 @@ public class Square extends Rectangle implements Moveable{
 
     @Override
     public void move(int x, int y) {
-        int x1=setX(x);
-        int y1=setY(y);
-        System.out.println("Square переместился на "+ x1 + ","+y1);
+        setX(x + getX());
+        setY(y + getY());
     }
 
     @Override
-    public void getPerimeter() {
-        int p = 4*getWidth();
-        System.out.println("Периметр Square равен " + p);
+    public double getPerimeter() {
+        return 4 * getWidth();
     }
 
     @Override
-    public void getArea() {
-        int s = getWidth()*getWidth();
-        System.out.println("Площадь Square равен " + s);
+    public double getArea() {
+        return getWidth() * getWidth();
     }
 }
