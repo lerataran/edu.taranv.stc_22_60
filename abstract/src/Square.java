@@ -1,4 +1,4 @@
-public class Square extends Rectangle implements Moveable{
+public class Square extends Rectangle implements Moveable {
     public Square(int x, int y, int side) {
         super(x, y, side, side);
     }

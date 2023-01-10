@@ -4,11 +4,12 @@ public class Main {
         array[i] = array[j];
         array[j] = temp;
     }
+
     public static void sortMass(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == 0 && array[j] != 0) {
-                    swap(array,i,j);
+                    swap(array, i, j);
                 }
             }
         }

@@ -1,7 +1,7 @@
 public class Circle extends Ellipse implements Moveable {
 
     public Circle(int x, int y, int radius) {
-        super(x, y,radius,radius);
+        super(x, y, radius, radius);
     }
 
     @Override

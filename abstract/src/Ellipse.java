@@ -4,8 +4,8 @@ public class Ellipse extends Figure {
 
     public Ellipse(int x, int y, int semiAxisA, int semiAxisB) {
         super(x, y);
-        this.semiAxisA=semiAxisA;
-        this.semiAxisB=semiAxisB;
+        this.semiAxisA = semiAxisA;
+        this.semiAxisB = semiAxisB;
     }
 
     public int getSemiAxisA() {
