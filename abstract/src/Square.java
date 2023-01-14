@@ -1,21 +1,21 @@
-public class Square extends Rectangle implements Moveable {
-    public Square(int x, int y, int side) {
-        super(x, y, side, side);
+public class Square extends Rectangle implements Movable {
+    public Square(int x, int y, int width) {
+        super(x, y, width, 0);
     }
 
     @Override
     public void move(int x, int y) {
-        setX(x + getX());
-        setY(y + getY());
+        this.x += x;
+        this.y += y;
     }
 
     @Override
     public double getPerimeter() {
-        return 4 * getWidth();
+        return 4 * width;
     }
 
     @Override
     public double getArea() {
-        return getWidth() * getWidth();
+        return width * width;
     }
 }

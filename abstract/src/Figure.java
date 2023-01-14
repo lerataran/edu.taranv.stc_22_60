@@ -1,10 +1,14 @@
 public abstract class Figure {
     protected int x;
     protected int y;
+    protected final int width;
+    protected final int height;
 
-    public Figure(int x, int y) {
+    public Figure(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
+        this.width = width;
+        this.height = height;
     }
 
     public int getX() {
@@ -13,14 +17,6 @@ public abstract class Figure {
 
     public int getY() {
         return y;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public abstract double getPerimeter();

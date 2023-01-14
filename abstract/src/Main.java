@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[9];
@@ -12,7 +14,7 @@ public class Main {
         figures[8] = new Circle(1, 2, 4);
 
 
-        Moveable[] movable = new Moveable[6];
+        Movable[] movable = new Movable[6];
         movable[0] = new Square(5, 2, 7);
         movable[1] = new Circle(9, 6, 5);
         movable[2] = new Circle(3, 8, 2);
@@ -21,12 +23,16 @@ public class Main {
         movable[5] = new Square(7, 6, 2);
 
         for (Figure figure : figures) {
-            figure.getPerimeter();
-            figure.getArea();
+            System.out.println(figure.getPerimeter());
+            System.out.println(figure.getArea());
         }
         System.out.println("*************************************************");
-        for (Moveable value : movable) {
-            value.move(2, 3);
+
+        Random random = new Random();
+
+        for (Movable value : movable) {
+            value.move(random.nextInt(5), random.nextInt(5));
+            System.out.println("Фигура" + value.getClass().getName() + "переместилась " + ((Figure) value).getX() + " " + ((Figure) value).getY());
         }
     }
 }

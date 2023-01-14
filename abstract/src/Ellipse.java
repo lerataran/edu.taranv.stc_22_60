@@ -1,25 +1,17 @@
 public class Ellipse extends Figure {
-    private final int semiAxisA;
-    private final int semiAxisB;
 
-    public Ellipse(int x, int y, int semiAxisA, int semiAxisB) {
-        super(x, y);
-        this.semiAxisA = semiAxisA;
-        this.semiAxisB = semiAxisB;
-    }
-
-    public int getSemiAxisA() {
-        return semiAxisA;
+    public Ellipse(int x, int y, int width, int height) {
+        super(x, y, width, height);
     }
 
     @Override
     public double getPerimeter() {
-        return (4 * (Math.PI * semiAxisA * semiAxisB + (semiAxisA - semiAxisB) * (semiAxisA - semiAxisB)) / (semiAxisA + semiAxisB));
+        return (4 * (Math.PI * width * height + (width - height) * (width - height)) / (width + height));
     }
 
     @Override
     public double getArea() {
-        return (Math.PI * semiAxisA * semiAxisB);
+        return (Math.PI * width * height);
     }
 }
 
