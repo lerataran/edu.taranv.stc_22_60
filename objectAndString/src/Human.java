@@ -24,10 +24,13 @@ public class Human {
     @Override
     public String toString() {
         int passportSeries = 3622;
-        return lastName + " " + name + " " + patronymic + '\n' +
-                "Паспорт:" + '\n' +
-                "Серия: " + passportSeries + " Номер: " + numberPassport + '\n' +
-                "Город " + city + ", " + street + ", дом " + house + ", квартира " + flat;
+        var sb = new StringBuilder();
+        var string = sb.append(lastName).append(" ").append(name).append(" ").append(patronymic).append('\n')
+                .append("Паспорт:").append('\n')
+                .append("Серия: ").append(passportSeries).append(" Номер: ").append(numberPassport).append('\n')
+                .append("Город ").append(city).append(", ").append(street)
+                .append(", дом ").append(house).append(", квартира ").append(flat);
+        return String.valueOf(string);
     }
 
     @Override
