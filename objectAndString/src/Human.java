@@ -23,11 +23,11 @@ public class Human {
 
     @Override
     public String toString() {
-        int passportSeries = 3622;
+        String[] passport = numberPassport.split("\\s+");
         var sb = new StringBuilder();
         var string = sb.append(lastName).append(" ").append(name).append(" ").append(patronymic).append('\n')
                 .append("Паспорт:").append('\n')
-                .append("Серия: ").append(passportSeries).append(" Номер: ").append(numberPassport).append('\n')
+                .append("Серия: ").append(passport[0]).append(" Номер: ").append(passport[1]).append('\n')
                 .append("Город ").append(city).append(", ").append(street)
                 .append(", дом ").append(house).append(", квартира ").append(flat);
         return String.valueOf(string);
