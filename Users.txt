@@ -1,0 +1,7 @@
+1|Valeriya|Taran|29|false
+2|Oleg|Bur|40|true
+3|Sem|Uber|23|true
+4|Lili|Drive|56|true
+5|May|Slop|5|false
+6|Kim|Kim|29|true
+7|Kim|Drive|12|false

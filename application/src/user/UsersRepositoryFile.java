@@ -1,3 +1,5 @@
+package user;
+
 public interface UsersRepositoryFile {
     User findById(int id);
 
