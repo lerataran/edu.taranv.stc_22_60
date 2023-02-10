@@ -8,10 +8,10 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 public class UsersRepositoryFileImpl implements UsersRepositoryFile {
-    String FILE_NAME = "Users.txt";
+    String FILE_NAME = "application/Users.txt";
 
     public static void intCountId() {
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("Users.txt"))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("application/Users.txt"))) {
             String line = bufferedReader.readLine();
             String[] arrayUser;
             int count = -1;
