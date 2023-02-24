@@ -1,0 +1,23 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="connection.url">
+            jdbc:postgresql://localhost:5432/application
+        </property>
+        <property name="connection.username">
+            postgres
+        </property>
+        <property name="connection.password">
+            Tar/2805
+        </property>
+        <property name="connection.driver_class">
+            org.postgresql.Driver
+        </property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <mapping class="table.Teacher"/>
+        <mapping class="table.Student"/>
+        <mapping class="table.TeacherStudent"/>
+    </session-factory>
+</hibernate-configuration>
