@@ -12,9 +12,8 @@ public class DBUtil {
     private static Connection connection;
 
     private DBUtil() throws IOException, SQLException {
-        this.connection = createConnection();
+       connection = createConnection();
     }
-
     public static Connection createConnection() throws IOException, SQLException {
         Properties properties = new Properties();
         if (connection == null) {
